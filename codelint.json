@@ -1,0 +1,8 @@
+{
+  "codeDirs": [
+    "src"
+  ],
+  "codeExt": ".py",
+  "baseBranch": "dev",
+  "maxLines": 500
+}
