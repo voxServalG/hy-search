@@ -32,7 +32,7 @@ Enforced programmatically, cannot be bypassed by prompts:
 
 | Constraint | Default | Description |
 |---|---|---|
-| `max_rounds` | 5 | Maximum search iterations |
+| `max_rounds` | 3 | Maximum search iterations |
 | `max_sources` | 50 | Maximum unique sources tracked |
 | `max_time_seconds` | 300 | Hard timeout for the entire research run |
 | `max_page_content_chars` | 8000 | Truncation per fetched page |

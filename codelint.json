@@ -2,7 +2,7 @@
   "codeDirs": [
     "src"
   ],
-  "codeExt": ".py",
+  "codeExt": ".ts",
   "baseBranch": "dev",
   "maxLines": 500
 }
