@@ -3,7 +3,40 @@
   "phase": "plan",
   "branch": null,
   "prNumber": null,
-  "plan": null,
-  "approval": null,
+  "plan": {
+    "task": "实现 hy-search MCP Server：基于 docs/ 中的架构设计与工具规范，搭建 TypeScript 项目并实现 web_search 和 deep_research 两个 MCP 工具。",
+    "scope": [
+      "src/types.ts",
+      "src/constraints.ts",
+      "src/services/tavily.ts",
+      "src/services/llm.ts",
+      "src/research/engine.ts",
+      "src/research/query-gen.ts",
+      "src/research/scorer.ts",
+      "src/research/gap-analysis.ts",
+      "src/research/synthesis.ts",
+      "src/server.ts",
+      "src/index.ts",
+      "package.json",
+      "tsconfig.json",
+      ".gitignore",
+      "docs/architecture.md (max_rounds 5→3)",
+      "doclint.json (codeExt .py→.ts)"
+    ],
+    "boundary": [
+      "不修改 docs/ 实质内容（仅数值对齐）",
+      "不涉及 CI 配置变更",
+      "不部署发布"
+    ],
+    "verify": {
+      "platform": "Node.js 18+, TypeScript 5.x, @modelcontextprotocol/sdk",
+      "smoke": "node dist/index.js 启动 stdio MCP Server，npx @anthropic-ai/mcp-inspector 连接并列出两个 tools",
+      "tests": "src/__tests__/web-search.test.ts 和 deep-research.test.ts：覆盖 handler 输出格式、engine 循环编排、scorer 评分过滤、constraints 校验"
+    }
+  },
+  "approval": {
+    "time": "2026-06-01T06:21:38.951Z",
+    "note": "Rejected by user"
+  },
   "verifyHash": null
 }
